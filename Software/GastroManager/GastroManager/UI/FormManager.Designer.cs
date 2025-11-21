@@ -47,36 +47,36 @@
             label1 = new Label();
             tabIngredients = new TabPage();
             tabDishDescription = new TabPage();
-            label10 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            label7 = new Label();
-            button1 = new Button();
-            label6 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label8 = new Label();
-            dataGridView1 = new DataGridView();
-            label9 = new Label();
-            pictureBox1 = new PictureBox();
-            pItems = new FlowLayoutPanel();
-            btnDishes = new Button();
-            btnIngredients = new Button();
-            btnExit = new Button();
+            lblDescriptionDetail = new Label();
+            numServingDetail = new NumericUpDown();
+            lblCostDetail = new Label();
+            btnBackDetail = new Button();
+            lblServingDetail = new Label();
+            lblRecipeDetail = new Label();
+            lblCategoryDetail = new Label();
+            lblTimeDetail = new Label();
+            lblIngredientsDetail = new Label();
+            dgvIngredientsDetail = new DataGridView();
             colStock = new DataGridViewCheckBoxColumn();
             colName = new DataGridViewTextBoxColumn();
             colQuantity = new DataGridViewTextBoxColumn();
             colUnit = new DataGridViewTextBoxColumn();
             colCost = new DataGridViewTextBoxColumn();
+            lblImageDetail = new Label();
+            pImageDetail = new PictureBox();
+            pItems = new FlowLayoutPanel();
+            btnDishes = new Button();
+            btnIngredients = new Button();
+            btnExit = new Button();
             tabControls.SuspendLayout();
             tabDishes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDishes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numMax).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numMin).BeginInit();
             tabDishDescription.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numServingDetail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvIngredientsDetail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pImageDetail).BeginInit();
             pItems.SuspendLayout();
             SuspendLayout();
             // 
@@ -266,18 +266,18 @@
             // 
             // tabDishDescription
             // 
-            tabDishDescription.Controls.Add(label10);
-            tabDishDescription.Controls.Add(numericUpDown1);
-            tabDishDescription.Controls.Add(label7);
-            tabDishDescription.Controls.Add(button1);
-            tabDishDescription.Controls.Add(label6);
-            tabDishDescription.Controls.Add(label3);
-            tabDishDescription.Controls.Add(label4);
-            tabDishDescription.Controls.Add(label5);
-            tabDishDescription.Controls.Add(label8);
-            tabDishDescription.Controls.Add(dataGridView1);
-            tabDishDescription.Controls.Add(label9);
-            tabDishDescription.Controls.Add(pictureBox1);
+            tabDishDescription.Controls.Add(lblDescriptionDetail);
+            tabDishDescription.Controls.Add(numServingDetail);
+            tabDishDescription.Controls.Add(lblCostDetail);
+            tabDishDescription.Controls.Add(btnBackDetail);
+            tabDishDescription.Controls.Add(lblServingDetail);
+            tabDishDescription.Controls.Add(lblRecipeDetail);
+            tabDishDescription.Controls.Add(lblCategoryDetail);
+            tabDishDescription.Controls.Add(lblTimeDetail);
+            tabDishDescription.Controls.Add(lblIngredientsDetail);
+            tabDishDescription.Controls.Add(dgvIngredientsDetail);
+            tabDishDescription.Controls.Add(lblImageDetail);
+            tabDishDescription.Controls.Add(pImageDetail);
             tabDishDescription.Location = new Point(4, 24);
             tabDishDescription.Name = "tabDishDescription";
             tabDishDescription.Padding = new Padding(3);
@@ -286,125 +286,165 @@
             tabDishDescription.Text = "tabDishDescription";
             tabDishDescription.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // lblDescriptionDetail
             // 
-            label10.AutoEllipsis = true;
-            label10.AutoSize = true;
-            label10.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
-            label10.Location = new Point(43, 126);
-            label10.Name = "label10";
-            label10.Size = new Size(125, 19);
-            label10.TabIndex = 22;
-            label10.Text = "Short Description:";
+            lblDescriptionDetail.AutoEllipsis = true;
+            lblDescriptionDetail.AutoSize = true;
+            lblDescriptionDetail.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
+            lblDescriptionDetail.Location = new Point(26, 126);
+            lblDescriptionDetail.Name = "lblDescriptionDetail";
+            lblDescriptionDetail.Size = new Size(125, 19);
+            lblDescriptionDetail.TabIndex = 22;
+            lblDescriptionDetail.Text = "Short Description:";
             // 
-            // numericUpDown1
+            // numServingDetail
             // 
-            numericUpDown1.Location = new Point(384, 56);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(47, 23);
-            numericUpDown1.TabIndex = 20;
+            numServingDetail.Location = new Point(367, 56);
+            numServingDetail.Name = "numServingDetail";
+            numServingDetail.Size = new Size(47, 23);
+            numServingDetail.TabIndex = 20;
             // 
-            // label7
+            // lblCostDetail
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
-            label7.Location = new Point(310, 87);
-            label7.Name = "label7";
-            label7.Size = new Size(79, 19);
-            label7.TabIndex = 21;
-            label7.Text = "Total Cost:";
+            lblCostDetail.AutoSize = true;
+            lblCostDetail.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
+            lblCostDetail.Location = new Point(293, 87);
+            lblCostDetail.Name = "lblCostDetail";
+            lblCostDetail.Size = new Size(79, 19);
+            lblCostDetail.TabIndex = 21;
+            lblCostDetail.Text = "Total Cost:";
             // 
-            // button1
+            // btnBackDetail
             // 
-            button1.BackColor = Color.White;
-            button1.Font = new Font("Poppins Medium", 9.75F, FontStyle.Bold);
-            button1.Location = new Point(220, 401);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 30);
-            button1.TabIndex = 3;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = false;
+            btnBackDetail.BackColor = Color.White;
+            btnBackDetail.Font = new Font("Poppins Medium", 9.75F, FontStyle.Bold);
+            btnBackDetail.Location = new Point(220, 401);
+            btnBackDetail.Name = "btnBackDetail";
+            btnBackDetail.Size = new Size(130, 30);
+            btnBackDetail.TabIndex = 3;
+            btnBackDetail.Text = "Back";
+            btnBackDetail.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // lblServingDetail
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
-            label6.Location = new Point(310, 58);
-            label6.Name = "label6";
-            label6.Size = new Size(68, 19);
-            label6.TabIndex = 19;
-            label6.Text = "Servings:";
+            lblServingDetail.AutoSize = true;
+            lblServingDetail.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
+            lblServingDetail.Location = new Point(293, 58);
+            lblServingDetail.Name = "lblServingDetail";
+            lblServingDetail.Size = new Size(68, 19);
+            lblServingDetail.TabIndex = 19;
+            lblServingDetail.Text = "Servings:";
             // 
-            // label3
+            // lblRecipeDetail
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(43, 20);
-            label3.Name = "label3";
-            label3.Size = new Size(112, 34);
-            label3.TabIndex = 16;
-            label3.Text = "Recipe for";
+            lblRecipeDetail.AutoSize = true;
+            lblRecipeDetail.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRecipeDetail.Location = new Point(23, 20);
+            lblRecipeDetail.Name = "lblRecipeDetail";
+            lblRecipeDetail.Size = new Size(239, 34);
+            lblRecipeDetail.TabIndex = 16;
+            lblRecipeDetail.Text = "Recipe for \"Dish Name\"";
             // 
-            // label4
+            // lblCategoryDetail
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
-            label4.Location = new Point(43, 58);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 19);
-            label4.TabIndex = 17;
-            label4.Text = "Category:";
+            lblCategoryDetail.AutoSize = true;
+            lblCategoryDetail.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
+            lblCategoryDetail.Location = new Point(26, 58);
+            lblCategoryDetail.Name = "lblCategoryDetail";
+            lblCategoryDetail.Size = new Size(72, 19);
+            lblCategoryDetail.TabIndex = 17;
+            lblCategoryDetail.Text = "Category:";
             // 
-            // label5
+            // lblTimeDetail
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
-            label5.Location = new Point(43, 87);
-            label5.Name = "label5";
-            label5.Size = new Size(101, 19);
-            label5.TabIndex = 18;
-            label5.Text = "Cooking Time:";
+            lblTimeDetail.AutoSize = true;
+            lblTimeDetail.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
+            lblTimeDetail.Location = new Point(26, 87);
+            lblTimeDetail.Name = "lblTimeDetail";
+            lblTimeDetail.Size = new Size(101, 19);
+            lblTimeDetail.TabIndex = 18;
+            lblTimeDetail.Text = "Cooking Time:";
             // 
-            // label8
+            // lblIngredientsDetail
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Poppins", 12F, FontStyle.Bold);
-            label8.Location = new Point(43, 167);
-            label8.Name = "label8";
-            label8.Size = new Size(108, 28);
-            label8.TabIndex = 15;
-            label8.Text = "Ingredients";
+            lblIngredientsDetail.AutoSize = true;
+            lblIngredientsDetail.Font = new Font("Poppins", 12F, FontStyle.Bold);
+            lblIngredientsDetail.Location = new Point(43, 167);
+            lblIngredientsDetail.Name = "lblIngredientsDetail";
+            lblIngredientsDetail.Size = new Size(108, 28);
+            lblIngredientsDetail.TabIndex = 15;
+            lblIngredientsDetail.Text = "Ingredients";
             // 
-            // dataGridView1
+            // dgvIngredientsDetail
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colStock, colName, colQuantity, colUnit, colCost });
-            dataGridView1.Location = new Point(26, 205);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(324, 183);
-            dataGridView1.TabIndex = 14;
+            dgvIngredientsDetail.AllowUserToAddRows = false;
+            dgvIngredientsDetail.AllowUserToDeleteRows = false;
+            dgvIngredientsDetail.AllowUserToOrderColumns = true;
+            dgvIngredientsDetail.AllowUserToResizeRows = false;
+            dgvIngredientsDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvIngredientsDetail.Columns.AddRange(new DataGridViewColumn[] { colStock, colName, colQuantity, colUnit, colCost });
+            dgvIngredientsDetail.Location = new Point(26, 205);
+            dgvIngredientsDetail.Name = "dgvIngredientsDetail";
+            dgvIngredientsDetail.Size = new Size(324, 183);
+            dgvIngredientsDetail.TabIndex = 14;
             // 
-            // label9
+            // colStock
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Poppins", 12F, FontStyle.Bold);
-            label9.Location = new Point(413, 167);
-            label9.Name = "label9";
-            label9.Size = new Size(66, 28);
-            label9.TabIndex = 11;
-            label9.Text = "Image";
+            colStock.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colStock.FillWeight = 48.8505974F;
+            colStock.HeaderText = "";
+            colStock.Name = "colStock";
+            colStock.ReadOnly = true;
             // 
-            // pictureBox1
+            // colName
             // 
-            pictureBox1.Location = new Point(399, 205);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(188, 183);
-            pictureBox1.TabIndex = 13;
-            pictureBox1.TabStop = false;
+            colName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colName.FillWeight = 126.903557F;
+            colName.HeaderText = "Name";
+            colName.Name = "colName";
+            colName.ReadOnly = true;
+            // 
+            // colQuantity
+            // 
+            colQuantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colQuantity.FillWeight = 108.081963F;
+            colQuantity.HeaderText = "Quantity";
+            colQuantity.Name = "colQuantity";
+            colQuantity.ReadOnly = true;
+            // 
+            // colUnit
+            // 
+            colUnit.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colUnit.FillWeight = 108.081963F;
+            colUnit.HeaderText = "Unit";
+            colUnit.Name = "colUnit";
+            colUnit.ReadOnly = true;
+            // 
+            // colCost
+            // 
+            colCost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colCost.FillWeight = 108.081963F;
+            colCost.HeaderText = "Cost";
+            colCost.Name = "colCost";
+            colCost.ReadOnly = true;
+            // 
+            // lblImageDetail
+            // 
+            lblImageDetail.AutoSize = true;
+            lblImageDetail.Font = new Font("Poppins", 12F, FontStyle.Bold);
+            lblImageDetail.Location = new Point(413, 167);
+            lblImageDetail.Name = "lblImageDetail";
+            lblImageDetail.Size = new Size(66, 28);
+            lblImageDetail.TabIndex = 11;
+            lblImageDetail.Text = "Image";
+            // 
+            // pImageDetail
+            // 
+            pImageDetail.Location = new Point(399, 205);
+            pImageDetail.Name = "pImageDetail";
+            pImageDetail.Size = new Size(188, 183);
+            pImageDetail.TabIndex = 13;
+            pImageDetail.TabStop = false;
             // 
             // pItems
             // 
@@ -453,46 +493,6 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
-            // colStock
-            // 
-            colStock.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colStock.FillWeight = 48.8505974F;
-            colStock.HeaderText = "";
-            colStock.Name = "colStock";
-            colStock.ReadOnly = true;
-            // 
-            // colName
-            // 
-            colName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colName.FillWeight = 126.903557F;
-            colName.HeaderText = "Name";
-            colName.Name = "colName";
-            colName.ReadOnly = true;
-            // 
-            // colQuantity
-            // 
-            colQuantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colQuantity.FillWeight = 108.081963F;
-            colQuantity.HeaderText = "Quantity";
-            colQuantity.Name = "colQuantity";
-            colQuantity.ReadOnly = true;
-            // 
-            // colUnit
-            // 
-            colUnit.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colUnit.FillWeight = 108.081963F;
-            colUnit.HeaderText = "Unit";
-            colUnit.Name = "colUnit";
-            colUnit.ReadOnly = true;
-            // 
-            // colCost
-            // 
-            colCost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colCost.FillWeight = 108.081963F;
-            colCost.HeaderText = "Cost";
-            colCost.Name = "colCost";
-            colCost.ReadOnly = true;
-            // 
             // FormManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -513,9 +513,9 @@
             ((System.ComponentModel.ISupportInitialize)numMin).EndInit();
             tabDishDescription.ResumeLayout(false);
             tabDishDescription.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numServingDetail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvIngredientsDetail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pImageDetail).EndInit();
             pItems.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -544,18 +544,18 @@
         private Button btnIngredients;
         private Button btnExit;
         private TabPage tabDishDescription;
-        private PictureBox pictureBox1;
-        private Label label10;
-        private NumericUpDown numericUpDown1;
-        private Label label7;
-        private Button button1;
-        private Label label6;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label8;
-        private DataGridView dataGridView1;
-        private Label label9;
+        private PictureBox pImageDetail;
+        private Label lblDescriptionDetail;
+        private NumericUpDown numServingDetail;
+        private Label lblCostDetail;
+        private Button btnBackDetail;
+        private Label lblServingDetail;
+        private Label lblRecipeDetail;
+        private Label lblCategoryDetail;
+        private Label lblTimeDetail;
+        private Label lblIngredientsDetail;
+        private DataGridView dgvIngredientsDetail;
+        private Label lblImageDetail;
         private DataGridViewCheckBoxColumn colStock;
         private DataGridViewTextBoxColumn colName;
         private DataGridViewTextBoxColumn colQuantity;

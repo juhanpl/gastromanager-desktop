@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GastroManager.Datos
+namespace GastroManager.Data
 {
     public static class Connection
     {

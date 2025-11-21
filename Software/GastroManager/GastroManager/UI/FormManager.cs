@@ -1,5 +1,4 @@
 using GastroManager.Data;
-using GastroManager.Datos;
 using GastroManager.Interfaces;
 using GastroManager.Logic;
 
@@ -9,14 +8,25 @@ namespace GastroManager
     {
 
         private bool _IsLoading = false;
+        private readonly DishesLogic _dishesLogic;
+        private readonly CategoriesLogic _categoriesLogic;
 
         public FormManager()
         {
             InitializeComponent();
             this.MaximizeBox = false;
 
-            //Init colors
+            //Set colors
             pItems.BackColor = ColorTranslator.FromHtml("#F96436");
+
+            //Init repos
+            var repoDishes = new DishesData();
+            var repoIngredients = new IngredientsData();
+            _dishesLogic = new DishesLogic(repoDishes, repoIngredients);
+            var repoCategories = new CategoriesData();
+            _categoriesLogic = new CategoriesLogic(repoCategories);
+
+
 
         }
 
@@ -50,10 +60,8 @@ namespace GastroManager
             //Refresh items
             cbCategory.Items.Clear();
 
-            //Init repo for obtains all categories
-            var repoCategories = new CategoriesData();
-            var logicCategories = new CategoriesLogic(repoCategories);
-            var categories = logicCategories.GetCategories();
+            //Obtain all categories
+            var categories = _categoriesLogic.GetCategories();
 
             //Add categories to the combobox
             cbCategory.Items.Add("All categories");
@@ -70,10 +78,6 @@ namespace GastroManager
             //Clear all dishes of the DataGridView
             dgvDishes.Rows.Clear();
 
-            //Init repo
-            var repoDishes = new DishesData();
-            var logicDishes = new DishesLogic(repoDishes);
-
             //Set filters
             string category = cbCategory.Text;
             string name = txtName.Text;
@@ -81,7 +85,7 @@ namespace GastroManager
             int min = Convert.ToInt32(numMin.Value);
             int max = Convert.ToInt32(numMax.Value);
 
-            var dishes = logicDishes.GetFilteredDishes(categoryName: category,
+            var dishes = _dishesLogic.GetFilteredDishes(categoryName: category,
                                                        dishName: name,
                                                        availableIngredients:
                                                        availableIngredients,
@@ -101,11 +105,11 @@ namespace GastroManager
         private void LoadAllDishes()
         {
 
-            //Init repo for obtain all dishes
-            var repoDishes = new DishesData();
-            var logicDishes = new DishesLogic(repoDishes);
+            //Clear all dishes of the DataGridView
+            dgvDishes.Rows.Clear();
 
-            var dishes = logicDishes.GetDishes();
+            //Obtain all dishes
+            var dishes = _dishesLogic.GetDishes();
 
             //Add dishes to the DataGridView
             foreach (var dish in dishes)
@@ -174,8 +178,27 @@ namespace GastroManager
                 tabControls.SelectedTab = tabDishDescription;
                 this.Text = "Recipes";
 
+                int dishId = Convert.ToInt32(dgvDishes.Rows[e.RowIndex].Cells[0].Value);
+
             }
         }
+
+        //private void LoadDishDetails(int Id)
+        //{
+
+        //    var dish = _dishesLogic.GetDish(Id);
+
+        //    if (dish == null)
+        //    {
+        //        MessageBox.Show("The dish selected don't exists");
+        //        return;
+        //    }
+
+        //    lblRecipeDetail.Text = @$"Recipe for ""{dish.DishName}""";
+        //    lblCategoryDetail.Text = $"Category: {dish.}";
+
+
+        //}
 
     }
 }

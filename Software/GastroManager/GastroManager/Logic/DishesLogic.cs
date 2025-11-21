@@ -1,4 +1,5 @@
-﻿using GastroManager.Entidades;
+﻿using GastroManager.DTOs;
+using GastroManager.Entidades;
 using GastroManager.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,13 @@ namespace GastroManager.Logic
     {
 
         private readonly IDishesRepository _repo;
+        private readonly IIngredientsRepository _repoIngredients;
 
-        public DishesLogic(IDishesRepository repo) 
+        public DishesLogic(IDishesRepository repo, IIngredientsRepository repoIngredients) 
         { 
         
             _repo = repo;
+            _repoIngredients = repoIngredients;
 
         }
 
@@ -29,6 +32,26 @@ namespace GastroManager.Logic
         {
 
             return _repo.Select();
+
+        }
+
+        public DishReadDTO? GetDish(int Id)
+        {
+            //Obtener plato
+            var dish = _repo.GetById(Id);
+
+            if (dish == null)
+            {
+
+                return null;
+                
+            }
+
+            //Obtener ingredientes del plato
+            dish.Ingredients = _repoIngredients.SelectByDishId(Id);
+
+            return dish;
+
 
         }
 

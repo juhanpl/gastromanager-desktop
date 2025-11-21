@@ -1,5 +1,4 @@
-﻿using GastroManager.Datos;
-using GastroManager.Entidades;
+﻿using GastroManager.Entidades;
 using GastroManager.Interfaces;
 using Microsoft.Data.SqlClient;
 using System;

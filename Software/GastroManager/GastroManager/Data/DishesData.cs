@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Data.SqlClient;
+using GastroManager.DTOs;
 
-namespace GastroManager.Datos
+namespace GastroManager.Data
 {
     public class DishesData : IDishesRepository
     {
@@ -152,7 +153,7 @@ namespace GastroManager.Datos
 
         }
 
-        public Dishes? GetById()
+        public DishReadDTO? GetById(int Id)
         {
 
             var connectionString = Connection.ConnectionString;
@@ -163,10 +164,39 @@ namespace GastroManager.Datos
                 conn.Open();
 
                 //Consulta - Listar Platos 
-                string query = "SELECT * FROM Dishes";
+                string query = @"SELECT
+
+                                D.Dish_Id,
+                                D.Dish_Name,
+                                C.Category_Name,
+                                D.Base_Servings,
+                                SUM(R.Time_In_Minutes) AS Time_In_Minutes,
+                                D.Final_Price_for_Clients,
+                                D.Description,
+                                D.Image_Path
+
+                                WHERE D.Dish_Id = @Id
+
+                                FROM Dishes D
+                                JOIN Categories C ON D.Category_Id = C.Category_Id
+                                JOIN Recipes R ON R.Dish_Id = D.Dish_Id
+                                GROUP BY 
+
+                                D.Dish_Id,
+                                D.Dish_Name,
+                                C.Category_Name,
+                                D.Base_Servings,
+                                D.Image_Path,
+                                D.Source_Recipe_Link,
+                                D.Description,
+                                D.Final_Price_for_Clients
+
+                                ORDER BY Dish_Id";
 
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
+
+                    command.Parameters.AddWithValue("@Id", Id);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -174,16 +204,16 @@ namespace GastroManager.Datos
                         if (reader.Read())
                         {
 
-                            return new Dishes()
+                            return new DishReadDTO()
                             {
                                 DishId = Convert.ToInt32(reader["Dish_Id"]),
                                 BaseServings = Convert.ToInt32(reader["Base_Servings"]),
-                                CategoryId = Convert.ToInt32(reader["Category_Id"]),
+                                CategoryName = Convert.ToString(reader["Category_Name"])!,
                                 Description = Convert.ToString(reader["Description"])!,
                                 DishName = Convert.ToString(reader["Dish_Name"])!,
                                 FinalPriceForClients = Convert.ToDecimal(reader["Final_Price_for_Clients"]),
                                 ImagePath = Convert.ToString(reader["Image_Path"])!,
-                                SourceRecipeLink = Convert.ToString(reader["Source_Recipe_Link"])!
+                                Time = Convert.ToInt32(reader["Time_In_Minutes"])
                             };
 
                         }
