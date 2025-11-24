@@ -18,7 +18,7 @@ namespace GastroManager.DTOs
         public decimal FinalPriceForClients { get; set; }
         public string Description { get; set; } = null!;
         public string ImagePath { get; set; } = null!;
-        public List<Ingredients> Ingredients { get; set; } = new List<Ingredients>();
+        public List<IngredientReadDTO> Ingredients { get; set; } = new List<IngredientReadDTO>();
 
     }
 }

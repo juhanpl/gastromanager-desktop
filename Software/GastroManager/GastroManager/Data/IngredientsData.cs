@@ -1,4 +1,5 @@
-﻿using GastroManager.Entidades;
+﻿using GastroManager.DTOs;
+using GastroManager.Entidades;
 using GastroManager.Interfaces;
 using Microsoft.Data.SqlClient;
 using System;
@@ -55,7 +56,7 @@ namespace GastroManager.Data
 
         }
 
-        public List<Ingredients> SelectByDishId(int Id)
+        public List<IngredientReadDTO> SelectByDishId(int Id)
         {
             string connectionString = Connection.ConnectionString;
 
@@ -66,15 +67,16 @@ namespace GastroManager.Data
 
 
                 string query = @"SELECT 
+                                I.Available_count_in_stock,
                                 I.Ingredient_Name,
-                                I.Price_per_Unit,
+                                DI.Quantity,
                                 I.Main_Unit,
-                                I.Available_count_in_stock
+                                I.Price_per_Unit
                                 FROM Ingredients I
                                 JOIN Dishes_Ingredients DI ON I.Ingredient_Id = DI.Ingredient_Id
                                 WHERE DI.Dish_Id = @Id";
 
-                List<Ingredients> ingredients = new List<Ingredients>();
+                List<IngredientReadDTO> ingredients = new List<IngredientReadDTO>();
 
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
@@ -87,14 +89,13 @@ namespace GastroManager.Data
                         while (reader.Read())
                         {
 
-                            ingredients.Add(new Ingredients()
+                            ingredients.Add(new IngredientReadDTO()
                             {
                                 AvailableCountInStock = Convert.ToInt32(reader["Available_count_in_stock"]),
-                                IngredientId = Convert.ToInt32(reader["Ingredient_Id"]),
                                 IngredientName = Convert.ToString(reader["Ingredient_Name"])!,
                                 MainUnit = Convert.ToString(reader["Main_Unit"])!,
-                                PricePerUnit = Convert.ToDecimal(reader["Price_per_Unit"])
-
+                                PricePerUnit = Convert.ToDecimal(reader["Price_per_Unit"]),
+                                Quantity = Convert.ToInt32(reader["Quantity"])
                             });
 
                         }

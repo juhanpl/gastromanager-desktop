@@ -175,11 +175,11 @@ namespace GastroManager.Data
                                 D.Description,
                                 D.Image_Path
 
-                                WHERE D.Dish_Id = @Id
-
                                 FROM Dishes D
                                 JOIN Categories C ON D.Category_Id = C.Category_Id
                                 JOIN Recipes R ON R.Dish_Id = D.Dish_Id
+
+                                WHERE D.Dish_Id = @Id
                                 GROUP BY 
 
                                 D.Dish_Id,

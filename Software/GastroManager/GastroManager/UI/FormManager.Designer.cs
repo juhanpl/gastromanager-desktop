@@ -47,7 +47,7 @@
             label1 = new Label();
             tabIngredients = new TabPage();
             tabDishDescription = new TabPage();
-            lblDescriptionDetail = new Label();
+            txtDescriptionDetail = new RichTextBox();
             numServingDetail = new NumericUpDown();
             lblCostDetail = new Label();
             btnBackDetail = new Button();
@@ -266,7 +266,7 @@
             // 
             // tabDishDescription
             // 
-            tabDishDescription.Controls.Add(lblDescriptionDetail);
+            tabDishDescription.Controls.Add(txtDescriptionDetail);
             tabDishDescription.Controls.Add(numServingDetail);
             tabDishDescription.Controls.Add(lblCostDetail);
             tabDishDescription.Controls.Add(btnBackDetail);
@@ -286,16 +286,14 @@
             tabDishDescription.Text = "tabDishDescription";
             tabDishDescription.UseVisualStyleBackColor = true;
             // 
-            // lblDescriptionDetail
+            // txtDescriptionDetail
             // 
-            lblDescriptionDetail.AutoEllipsis = true;
-            lblDescriptionDetail.AutoSize = true;
-            lblDescriptionDetail.Font = new Font("Poppins Medium", 8F, FontStyle.Bold);
-            lblDescriptionDetail.Location = new Point(26, 126);
-            lblDescriptionDetail.Name = "lblDescriptionDetail";
-            lblDescriptionDetail.Size = new Size(125, 19);
-            lblDescriptionDetail.TabIndex = 22;
-            lblDescriptionDetail.Text = "Short Description:";
+            txtDescriptionDetail.Location = new Point(31, 119);
+            txtDescriptionDetail.Name = "txtDescriptionDetail";
+            txtDescriptionDetail.ReadOnly = true;
+            txtDescriptionDetail.Size = new Size(556, 39);
+            txtDescriptionDetail.TabIndex = 23;
+            txtDescriptionDetail.Text = "";
             // 
             // numServingDetail
             // 
@@ -318,7 +316,7 @@
             // 
             btnBackDetail.BackColor = Color.White;
             btnBackDetail.Font = new Font("Poppins Medium", 9.75F, FontStyle.Bold);
-            btnBackDetail.Location = new Point(220, 401);
+            btnBackDetail.Location = new Point(225, 398);
             btnBackDetail.Name = "btnBackDetail";
             btnBackDetail.Size = new Size(130, 30);
             btnBackDetail.TabIndex = 3;
@@ -369,7 +367,7 @@
             // 
             lblIngredientsDetail.AutoSize = true;
             lblIngredientsDetail.Font = new Font("Poppins", 12F, FontStyle.Bold);
-            lblIngredientsDetail.Location = new Point(43, 167);
+            lblIngredientsDetail.Location = new Point(31, 167);
             lblIngredientsDetail.Name = "lblIngredientsDetail";
             lblIngredientsDetail.Size = new Size(108, 28);
             lblIngredientsDetail.TabIndex = 15;
@@ -383,7 +381,7 @@
             dgvIngredientsDetail.AllowUserToResizeRows = false;
             dgvIngredientsDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvIngredientsDetail.Columns.AddRange(new DataGridViewColumn[] { colStock, colName, colQuantity, colUnit, colCost });
-            dgvIngredientsDetail.Location = new Point(26, 205);
+            dgvIngredientsDetail.Location = new Point(31, 198);
             dgvIngredientsDetail.Name = "dgvIngredientsDetail";
             dgvIngredientsDetail.Size = new Size(324, 183);
             dgvIngredientsDetail.TabIndex = 14;
@@ -432,7 +430,7 @@
             // 
             lblImageDetail.AutoSize = true;
             lblImageDetail.Font = new Font("Poppins", 12F, FontStyle.Bold);
-            lblImageDetail.Location = new Point(413, 167);
+            lblImageDetail.Location = new Point(399, 167);
             lblImageDetail.Name = "lblImageDetail";
             lblImageDetail.Size = new Size(66, 28);
             lblImageDetail.TabIndex = 11;
@@ -440,9 +438,11 @@
             // 
             // pImageDetail
             // 
-            pImageDetail.Location = new Point(399, 205);
+            pImageDetail.Cursor = Cursors.Hand;
+            pImageDetail.Location = new Point(399, 198);
             pImageDetail.Name = "pImageDetail";
             pImageDetail.Size = new Size(188, 183);
+            pImageDetail.SizeMode = PictureBoxSizeMode.StretchImage;
             pImageDetail.TabIndex = 13;
             pImageDetail.TabStop = false;
             // 
@@ -545,7 +545,6 @@
         private Button btnExit;
         private TabPage tabDishDescription;
         private PictureBox pImageDetail;
-        private Label lblDescriptionDetail;
         private NumericUpDown numServingDetail;
         private Label lblCostDetail;
         private Button btnBackDetail;
@@ -561,5 +560,6 @@
         private DataGridViewTextBoxColumn colQuantity;
         private DataGridViewTextBoxColumn colUnit;
         private DataGridViewTextBoxColumn colCost;
+        private RichTextBox txtDescriptionDetail;
     }
 }

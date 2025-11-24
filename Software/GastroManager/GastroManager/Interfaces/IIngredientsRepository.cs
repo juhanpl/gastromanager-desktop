@@ -1,4 +1,5 @@
-﻿using GastroManager.Entidades;
+﻿using GastroManager.DTOs;
+using GastroManager.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ namespace GastroManager.Interfaces
     {
 
         List<Ingredients> Select();
-        List<Ingredients> SelectByDishId(int Id);
+        List<IngredientReadDTO> SelectByDishId(int Id);
 
     }
 }

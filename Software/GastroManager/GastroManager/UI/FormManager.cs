@@ -175,30 +175,50 @@ namespace GastroManager
             if (dgvDishes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value?.ToString() == "View")
             {
 
+                int dishId = Convert.ToInt32(dgvDishes.Rows[e.RowIndex].Cells[0].Value);
+
+                LoadDishDetails(dishId);
+
                 tabControls.SelectedTab = tabDishDescription;
                 this.Text = "Recipes";
-
-                int dishId = Convert.ToInt32(dgvDishes.Rows[e.RowIndex].Cells[0].Value);
 
             }
         }
 
-        //private void LoadDishDetails(int Id)
-        //{
+        private void LoadDishDetails(int Id)
+        {
 
-        //    var dish = _dishesLogic.GetDish(Id);
+            var dish = _dishesLogic.GetDish(Id);
 
-        //    if (dish == null)
-        //    {
-        //        MessageBox.Show("The dish selected don't exists");
-        //        return;
-        //    }
+            if (dish == null)
+            {
+                MessageBox.Show("The dish selected don't exists");
+                return;
+            }
 
-        //    lblRecipeDetail.Text = @$"Recipe for ""{dish.DishName}""";
-        //    lblCategoryDetail.Text = $"Category: {dish.}";
+            //Put info in their respective labels
+            lblRecipeDetail.Text = @$"Recipe for ""{dish.DishName}""";
+            lblCategoryDetail.Text = $"Category: {dish.CategoryName}";
+            lblTimeDetail.Text = $"Cooking Time: {dish.Time} minutes";
+            numServingDetail.Value = dish.BaseServings;
+            lblCostDetail.Text = $"Total Cost: {dish.FinalPriceForClients * dish.BaseServings}$";
+            txtDescriptionDetail.Text = $"Short Description: {dish.Description}";
 
 
-        //}
+            //Fill the DataGridView with the ingredients of the dish
+            foreach (var item in dish.Ingredients)
+            {
+
+                dgvIngredientsDetail.Rows.Add(item.AvailableCountInStock > 0, item.IngredientName, item.Quantity, item.MainUnit, item.MainUnit);
+
+            }
+
+            //Load image of the Dish
+            pImageDetail.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Source", dish.ImagePath));
+
+
+
+        }
 
     }
 }
