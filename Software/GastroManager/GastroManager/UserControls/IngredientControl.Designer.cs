@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            linkLabel1 = new LinkLabel();
+            lblNameIngredient = new Label();
+            lblPrice = new Label();
+            linkedDelete = new LinkLabel();
             numUnit = new NumericUpDown();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)numUnit).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblNameIngredient
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(15, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(205, 34);
-            label1.TabIndex = 3;
-            label1.Text = "Name of Ingredient";
+            lblNameIngredient.AutoSize = true;
+            lblNameIngredient.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNameIngredient.Location = new Point(15, 23);
+            lblNameIngredient.Name = "lblNameIngredient";
+            lblNameIngredient.Size = new Size(205, 34);
+            lblNameIngredient.TabIndex = 3;
+            lblNameIngredient.Text = "Name of Ingredient";
             // 
-            // label2
+            // lblPrice
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(15, 58);
-            label2.Name = "label2";
-            label2.Size = new Size(41, 22);
-            label2.TabIndex = 4;
-            label2.Text = "Price:";
+            lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPrice.Location = new Point(15, 58);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(41, 22);
+            lblPrice.TabIndex = 4;
+            lblPrice.Text = "Price:";
             // 
-            // linkLabel1
+            // linkedDelete
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Poppins", 9F);
-            linkLabel1.LinkColor = Color.Red;
-            linkLabel1.Location = new Point(15, 80);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(46, 22);
-            linkLabel1.TabIndex = 5;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Delete";
+            linkedDelete.AutoSize = true;
+            linkedDelete.Font = new Font("Poppins", 9F);
+            linkedDelete.LinkColor = Color.Red;
+            linkedDelete.Location = new Point(15, 80);
+            linkedDelete.Name = "linkedDelete";
+            linkedDelete.Size = new Size(46, 22);
+            linkedDelete.TabIndex = 5;
+            linkedDelete.TabStop = true;
+            linkedDelete.Text = "Delete";
             // 
             // numUnit
             // 
@@ -92,9 +92,9 @@
             BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(label3);
             Controls.Add(numUnit);
-            Controls.Add(linkLabel1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(linkedDelete);
+            Controls.Add(lblPrice);
+            Controls.Add(lblNameIngredient);
             Name = "IngredientControl";
             Size = new Size(267, 134);
             ((System.ComponentModel.ISupportInitialize)numUnit).EndInit();
@@ -104,9 +104,9 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private LinkLabel linkLabel1;
+        private Label lblNameIngredient;
+        private Label lblPrice;
+        private LinkLabel linkedDelete;
         private NumericUpDown numUnit;
         private Label label3;
     }
