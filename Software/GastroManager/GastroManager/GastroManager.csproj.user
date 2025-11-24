@@ -4,5 +4,8 @@
     <Compile Update="UI\FormManager.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControls\IngredientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

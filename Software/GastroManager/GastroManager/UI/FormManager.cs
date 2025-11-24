@@ -2,6 +2,7 @@ using GastroManager.Data;
 using GastroManager.DTOs;
 using GastroManager.Interfaces;
 using GastroManager.Logic;
+using GastroManager.UserControls;
 using System.Text;
 
 namespace GastroManager
@@ -10,12 +11,16 @@ namespace GastroManager
     {
 
         private bool _IsLoading = false;
+
+        //Repos
         private readonly DishesLogic _dishesLogic;
         private readonly CategoriesLogic _categoriesLogic;
         private readonly RecipeLogic _recipeLogic;
+        private readonly IngredientsLogic _ingredientsLogic;
 
         public FormManager()
         {
+
             InitializeComponent();
             this.MaximizeBox = false;
 
@@ -26,12 +31,15 @@ namespace GastroManager
             var repoDishes = new DishesData();
             var repoIngredients = new IngredientsData();
             _dishesLogic = new DishesLogic(repoDishes, repoIngredients);
+
             var repoCategories = new CategoriesData();
             _categoriesLogic = new CategoriesLogic(repoCategories);
+
             var repoRecipe = new RecipeData();
             _recipeLogic = new RecipeLogic(repoRecipe);
 
-
+            var repoIngredient = new IngredientsData();
+            _ingredientsLogic = new IngredientsLogic(repoIngredient);
 
         }
 
@@ -126,6 +134,25 @@ namespace GastroManager
 
         }
 
+        private void LoadAllIngredients()
+        {
+
+            flowIngredients.Controls.Clear();
+
+            var ingredients = _ingredientsLogic.GetIngredients();
+
+            foreach (var item in ingredients)
+            {
+
+                var ingredientControl = new IngredientControl();
+
+                flowIngredients.Controls.Add(ingredientControl);
+
+                
+            }
+
+        }
+
         private void FormManager_Load(object sender, EventArgs e)
         {
             //Loading state: If isn't complete the others events can't succeed
@@ -137,6 +164,9 @@ namespace GastroManager
             //Reload all items
             LoadCategories();
             LoadAllDishes();
+            LoadAllIngredients();
+
+
 
             _IsLoading = false;
 
@@ -244,6 +274,8 @@ namespace GastroManager
 
             }
 
+
+            //Dispose resources
             if (pImageDetail.Image != null)
             {
                 pImageDetail.Image.Dispose();

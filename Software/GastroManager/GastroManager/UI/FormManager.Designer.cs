@@ -43,9 +43,12 @@
             lblName = new Label();
             cbCategory = new ComboBox();
             lblCategory = new Label();
+            lblListOfDishDescription = new Label();
+            lblListOfDishes = new Label();
+            tabIngredients = new TabPage();
+            flowIngredients = new FlowLayoutPanel();
             label2 = new Label();
             label1 = new Label();
-            tabIngredients = new TabPage();
             tabDishDescription = new TabPage();
             txtDescriptionDetail = new RichTextBox();
             numServingDetail = new NumericUpDown();
@@ -73,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvDishes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numMax).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numMin).BeginInit();
+            tabIngredients.SuspendLayout();
             tabDishDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numServingDetail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvIngredientsDetail).BeginInit();
@@ -102,8 +106,8 @@
             tabDishes.Controls.Add(lblName);
             tabDishes.Controls.Add(cbCategory);
             tabDishes.Controls.Add(lblCategory);
-            tabDishes.Controls.Add(label2);
-            tabDishes.Controls.Add(label1);
+            tabDishes.Controls.Add(lblListOfDishDescription);
+            tabDishes.Controls.Add(lblListOfDishes);
             tabDishes.Location = new Point(4, 24);
             tabDishes.Name = "tabDishes";
             tabDishes.Padding = new Padding(3);
@@ -163,7 +167,7 @@
             numMax.Name = "numMax";
             numMax.Size = new Size(41, 23);
             numMax.TabIndex = 10;
-            numMax.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            numMax.Value = new decimal(new int[] { 50, 0, 0, 0 });
             numMax.ValueChanged += maxPrice_ValueChanged;
             // 
             // numMin
@@ -234,28 +238,31 @@
             lblCategory.TabIndex = 2;
             lblCategory.Text = "Category:";
             // 
-            // label2
+            // lblListOfDishDescription
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(33, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(516, 22);
-            label2.TabIndex = 1;
-            label2.Text = "Explore our full menu below. Use the filter to see only dishes with available ingredients.";
+            lblListOfDishDescription.AutoSize = true;
+            lblListOfDishDescription.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblListOfDishDescription.Location = new Point(33, 53);
+            lblListOfDishDescription.Name = "lblListOfDishDescription";
+            lblListOfDishDescription.Size = new Size(516, 22);
+            lblListOfDishDescription.TabIndex = 1;
+            lblListOfDishDescription.Text = "Explore our full menu below. Use the filter to see only dishes with available ingredients.";
             // 
-            // label1
+            // lblListOfDishes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(33, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(143, 34);
-            label1.TabIndex = 0;
-            label1.Text = "List of Dishes";
+            lblListOfDishes.AutoSize = true;
+            lblListOfDishes.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblListOfDishes.Location = new Point(33, 19);
+            lblListOfDishes.Name = "lblListOfDishes";
+            lblListOfDishes.Size = new Size(143, 34);
+            lblListOfDishes.TabIndex = 0;
+            lblListOfDishes.Text = "List of Dishes";
             // 
             // tabIngredients
             // 
+            tabIngredients.Controls.Add(flowIngredients);
+            tabIngredients.Controls.Add(label2);
+            tabIngredients.Controls.Add(label1);
             tabIngredients.Location = new Point(4, 24);
             tabIngredients.Name = "tabIngredients";
             tabIngredients.Padding = new Padding(3);
@@ -263,6 +270,34 @@
             tabIngredients.TabIndex = 0;
             tabIngredients.Text = "tabPage1";
             tabIngredients.UseVisualStyleBackColor = true;
+            // 
+            // flowIngredients
+            // 
+            flowIngredients.AutoScroll = true;
+            flowIngredients.Location = new Point(33, 96);
+            flowIngredients.Name = "flowIngredients";
+            flowIngredients.Size = new Size(575, 330);
+            flowIngredients.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(33, 53);
+            label2.Name = "label2";
+            label2.Size = new Size(316, 22);
+            label2.TabIndex = 3;
+            label2.Text = "Total available ingredients for the amount ($): NNNN";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(33, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(191, 34);
+            label1.TabIndex = 2;
+            label1.Text = "List of Ingredients";
             // 
             // tabDishDescription
             // 
@@ -463,7 +498,7 @@
             // btnDishes
             // 
             btnDishes.BackColor = Color.White;
-            btnDishes.Font = new Font("Poppins Medium", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDishes.Font = new Font("Poppins", 9.75F);
             btnDishes.Location = new Point(3, 3);
             btnDishes.Name = "btnDishes";
             btnDishes.Size = new Size(168, 40);
@@ -475,7 +510,7 @@
             // btnIngredients
             // 
             btnIngredients.BackColor = Color.White;
-            btnIngredients.Font = new Font("Poppins Medium", 9.75F, FontStyle.Bold);
+            btnIngredients.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnIngredients.Location = new Point(3, 49);
             btnIngredients.Name = "btnIngredients";
             btnIngredients.Size = new Size(168, 40);
@@ -487,7 +522,7 @@
             // btnExit
             // 
             btnExit.BackColor = Color.White;
-            btnExit.Font = new Font("Poppins Medium", 9.75F, FontStyle.Bold);
+            btnExit.Font = new Font("Poppins", 9.75F);
             btnExit.Location = new Point(3, 95);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(168, 40);
@@ -514,6 +549,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvDishes).EndInit();
             ((System.ComponentModel.ISupportInitialize)numMax).EndInit();
             ((System.ComponentModel.ISupportInitialize)numMin).EndInit();
+            tabIngredients.ResumeLayout(false);
+            tabIngredients.PerformLayout();
             tabDishDescription.ResumeLayout(false);
             tabDishDescription.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numServingDetail).EndInit();
@@ -527,8 +564,8 @@
         private TabControl tabControls;
         private TabPage tabDishes;
         private TabPage tabIngredients;
-        private Label label2;
-        private Label label1;
+        private Label lblListOfDishDescription;
+        private Label lblListOfDishes;
         private CheckBox checkAvailable;
         private TextBox txtName;
         private Label lblName;
@@ -564,5 +601,8 @@
         private DataGridViewTextBoxColumn colUnit;
         private DataGridViewTextBoxColumn colCost;
         private RichTextBox txtDescriptionDetail;
+        private FlowLayoutPanel flowIngredients;
+        private Label label2;
+        private Label label1;
     }
 }

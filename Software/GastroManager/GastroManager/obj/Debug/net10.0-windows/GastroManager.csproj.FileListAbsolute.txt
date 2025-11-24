@@ -73,3 +73,4 @@ C:\Users\Aprendiz\Desktop\GastroManager\Software\GastroManager\GastroManager\obj
 C:\Users\Aprendiz\Desktop\GastroManager\Software\GastroManager\GastroManager\obj\Debug\net10.0-windows\GastroManager.pdb
 C:\Users\Aprendiz\Desktop\GastroManager\Software\GastroManager\GastroManager\obj\Debug\net10.0-windows\GastroManager.genruntimeconfig.cache
 C:\Users\Aprendiz\Desktop\GastroManager\Software\GastroManager\GastroManager\obj\Debug\net10.0-windows\ref\GastroManager.dll
+C:\Users\Aprendiz\Desktop\GastroManager\Software\GastroManager\GastroManager\obj\Debug\net10.0-windows\GastroManager.UserControls.IngredientControl.resources
