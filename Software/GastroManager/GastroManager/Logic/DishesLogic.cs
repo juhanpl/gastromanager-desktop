@@ -21,6 +21,13 @@ namespace GastroManager.Logic
 
         }
 
+        public void ChangeServings(int dishId, int baseServings)
+        {
+
+            _repo.UpdateServings(dishId, baseServings);
+
+        }
+
         public List<Dishes> GetFilteredDishes(string categoryName, string dishName, bool availableIngredients, int minPrice, int maxPrice)
         {
 

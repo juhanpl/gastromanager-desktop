@@ -1,6 +1,8 @@
 using GastroManager.Data;
+using GastroManager.DTOs;
 using GastroManager.Interfaces;
 using GastroManager.Logic;
+using System.Text;
 
 namespace GastroManager
 {
@@ -10,6 +12,7 @@ namespace GastroManager
         private bool _IsLoading = false;
         private readonly DishesLogic _dishesLogic;
         private readonly CategoriesLogic _categoriesLogic;
+        private readonly RecipeLogic _recipeLogic;
 
         public FormManager()
         {
@@ -25,6 +28,8 @@ namespace GastroManager
             _dishesLogic = new DishesLogic(repoDishes, repoIngredients);
             var repoCategories = new CategoriesData();
             _categoriesLogic = new CategoriesLogic(repoCategories);
+            var repoRecipe = new RecipeData();
+            _recipeLogic = new RecipeLogic(repoRecipe);
 
 
 
@@ -177,6 +182,9 @@ namespace GastroManager
 
                 int dishId = Convert.ToInt32(dgvDishes.Rows[e.RowIndex].Cells[0].Value);
 
+                //Save the Id of the dish in the Image
+                pImageDetail.Tag = dishId;
+
                 LoadDishDetails(dishId);
 
                 tabControls.SelectedTab = tabDishDescription;
@@ -202,23 +210,90 @@ namespace GastroManager
             lblTimeDetail.Text = $"Cooking Time: {dish.Time} minutes";
             numServingDetail.Value = dish.BaseServings;
             lblCostDetail.Text = $"Total Cost: {dish.FinalPriceForClients * dish.BaseServings}$";
+            lblCostDetail.Tag = dish.FinalPriceForClients;
             txtDescriptionDetail.Text = $"Short Description: {dish.Description}";
 
 
-            //Fill the DataGridView with the ingredients of the dish
+            var formattedIngredients = new List<IngredientReadDTO>();
+
+            //If there are identical ingredients, they are added together.
             foreach (var item in dish.Ingredients)
             {
 
-                dgvIngredientsDetail.Rows.Add(item.AvailableCountInStock > 0, item.IngredientName, item.Quantity, item.MainUnit, item.MainUnit);
+                if (!formattedIngredients.Any(u => u.IngredientName == item.IngredientName))
+                {
+                    formattedIngredients.Add(item);
+                }
+                else
+                {
 
+                    var ingredient = formattedIngredients.FirstOrDefault(u => u.IngredientName == item.IngredientName);
+
+                    ingredient.PricePerUnit += item.PricePerUnit;
+                    ingredient.Quantity += item.Quantity;
+
+                }
+
+            }
+
+            //Fill the DataGridView with the ingredients of the dish
+            foreach (var item in formattedIngredients)
+            {
+
+                dgvIngredientsDetail.Rows.Add(item.AvailableCountInStock > 0, item.IngredientName, item.Quantity, item.MainUnit, item.PricePerUnit);
+
+            }
+
+            if (pImageDetail.Image != null)
+            {
+                pImageDetail.Image.Dispose();
             }
 
             //Load image of the Dish
             pImageDetail.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Source", dish.ImagePath));
 
+        }
 
+        private void pImageDetail_Click(object sender, EventArgs e)
+        {
+
+            int id = Convert.ToInt32(pImageDetail.Tag);
+
+            var recipes = _recipeLogic.GetRecipeOfDish(id);
+
+            string recipeContent = "";
+
+            for (int i = 0; i < recipes.Count; i++)
+            {
+
+                recipeContent += $"{i + 1}. {recipes[i]}\n";
+
+            }
+
+            MessageBox.Show(recipeContent, lblRecipeDetail.Text);
 
         }
 
+        private void btnBackDetail_Click(object sender, EventArgs e)
+        {
+
+            tabControls.SelectedTab = tabDishes;
+            this.Text = "Dishes";
+
+        }
+
+        private void numServingDetail_ValueChanged(object sender, EventArgs e)
+        {
+
+            int id = Convert.ToInt32(pImageDetail.Tag);
+            decimal price = Convert.ToDecimal(lblCostDetail.Tag);
+
+            int baseServings = Convert.ToInt32(numServingDetail.Value);
+
+            _dishesLogic.ChangeServings(id, baseServings);
+
+            lblCostDetail.Text = $"Total Cost: {price * baseServings}$";
+
+        }
     }
 }

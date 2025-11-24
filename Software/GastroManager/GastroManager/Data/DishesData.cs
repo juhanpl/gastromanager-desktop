@@ -229,5 +229,34 @@ namespace GastroManager.Data
             }
 
         }
+
+        public void UpdateServings(int dishId, int baseServings)
+        {
+
+            var connectionString = Connection.ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+
+                conn.Open();
+
+                string query = @"UPDATE
+                                Dishes 
+                                SET Base_Servings = @Base_Servings
+                                WHERE Dish_Id = @Id";
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+
+                    command.Parameters.AddWithValue("@Base_Servings", baseServings);
+                    command.Parameters.AddWithValue("@Id", dishId);
+
+                    command.ExecuteNonQuery();
+
+                }
+
+            }
+
+        }
     }
 }

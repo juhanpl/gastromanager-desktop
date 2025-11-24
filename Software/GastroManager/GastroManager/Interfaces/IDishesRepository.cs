@@ -17,6 +17,7 @@ namespace GastroManager.Interfaces
         List<Dishes> Select();
 
         DishReadDTO? GetById(int Id);
+        void UpdateServings(int dishId, int baseServings);
 
     }
 }

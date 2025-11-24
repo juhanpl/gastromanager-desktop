@@ -301,6 +301,7 @@
             numServingDetail.Name = "numServingDetail";
             numServingDetail.Size = new Size(47, 23);
             numServingDetail.TabIndex = 20;
+            numServingDetail.ValueChanged += numServingDetail_ValueChanged;
             // 
             // lblCostDetail
             // 
@@ -322,6 +323,7 @@
             btnBackDetail.TabIndex = 3;
             btnBackDetail.Text = "Back";
             btnBackDetail.UseVisualStyleBackColor = false;
+            btnBackDetail.Click += btnBackDetail_Click;
             // 
             // lblServingDetail
             // 
@@ -445,6 +447,7 @@
             pImageDetail.SizeMode = PictureBoxSizeMode.StretchImage;
             pImageDetail.TabIndex = 13;
             pImageDetail.TabStop = false;
+            pImageDetail.Click += pImageDetail_Click;
             // 
             // pItems
             // 
