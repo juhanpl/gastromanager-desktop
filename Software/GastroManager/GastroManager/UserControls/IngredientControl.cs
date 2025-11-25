@@ -88,5 +88,11 @@ namespace GastroManager.UserControls
             ChangedStockAction?.Invoke(this, IngredientId);
 
         }
+
+        private void numUnit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '-' || e.KeyChar == '+')
+                e.Handled = true;
+        }
     }
 }

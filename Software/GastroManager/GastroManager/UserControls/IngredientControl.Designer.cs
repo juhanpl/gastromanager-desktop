@@ -76,6 +76,7 @@
             numUnit.Size = new Size(49, 23);
             numUnit.TabIndex = 6;
             numUnit.ValueChanged += numUnit_ValueChanged;
+            numUnit.KeyPress += numUnit_KeyPress;
             // 
             // lblUnit
             // 

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|c:\\users\\aprendiz\\desktop\\gastromanager\\software\\gastromanager\\gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|c:\\users\\aprendiz\\desktop\\gastromanager\\software\\gastromanager\\gastromanager\\usercontrols\\ingredientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\usercontrols\\ingredientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\gastromanager\\usercontrols\\ingredientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\usercontrols\\ingredientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|c:\\users\\aprendiz\\desktop\\gastromanager\\software\\gastromanager\\gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|c:\\users\\aprendiz\\desktop\\gastromanager\\software\\gastromanager\\gastromanager\\logic\\ingredientslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +39,8 @@
       "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\data\\dishesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\ui\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|c:\\users\\aprendiz\\desktop\\gastromanager\\software\\gastromanager\\gastromanager\\logic\\disheslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\logic\\disheslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\gastromanager\\usercontrols\\ingredientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|solutionrelative:gastromanager\\usercontrols\\ingredientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85501E83-D044-6123-7C58-BF728903E8CE}|GastroManager\\GastroManager.csproj|c:\\users\\aprendiz\\desktop\\gastromanager\\software\\gastromanager\\gastromanager\\data\\recipedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -141,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "IngredientsLogic.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\Logic\\IngredientsLogic.cs",
               "RelativeDocumentMoniker": "GastroManager\\Logic\\IngredientsLogic.cs",
@@ -153,27 +153,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "IngredientControl.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UserControls\\IngredientControl.cs",
               "RelativeDocumentMoniker": "GastroManager\\UserControls\\IngredientControl.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UserControls\\IngredientControl.cs",
               "RelativeToolTip": "GastroManager\\UserControls\\IngredientControl.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowEkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAhwFsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T20:07:52.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "IngredientControl.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UserControls\\IngredientControl.cs",
               "RelativeDocumentMoniker": "GastroManager\\UserControls\\IngredientControl.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UserControls\\IngredientControl.cs [Dise\u00F1o]",
               "RelativeToolTip": "GastroManager\\UserControls\\IngredientControl.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T20:06:43.56Z"
+              "WhenOpened": "2025-11-24T20:06:43.56Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -184,7 +185,8 @@
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.resx",
               "RelativeToolTip": "GastroManager\\UI\\FormManager.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-24T19:27:29.26Z"
+              "WhenOpened": "2025-11-24T19:27:29.26Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -196,7 +198,8 @@
               "RelativeToolTip": "GastroManager\\UI\\FormManager.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T19:27:27.906Z"
+              "WhenOpened": "2025-11-24T19:27:27.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -248,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IngredientsData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\Data\\IngredientsData.cs",
               "RelativeDocumentMoniker": "GastroManager\\Data\\IngredientsData.cs",
@@ -260,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "IIngredientsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\Interfaces\\IIngredientsRepository.cs",
               "RelativeDocumentMoniker": "GastroManager\\Interfaces\\IIngredientsRepository.cs",
@@ -272,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DishesLogic.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\Logic\\DishesLogic.cs",
               "RelativeDocumentMoniker": "GastroManager\\Logic\\DishesLogic.cs",
@@ -284,20 +287,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FormManager.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.cs",
               "RelativeDocumentMoniker": "GastroManager\\UI\\FormManager.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.cs",
               "RelativeToolTip": "GastroManager\\UI\\FormManager.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAADwv+AAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGYBAAAAAAAAAAAwwOAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T19:15:34.533Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IDishesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\Interfaces\\IDishesRepository.cs",
               "RelativeDocumentMoniker": "GastroManager\\Interfaces\\IDishesRepository.cs",
@@ -333,18 +336,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "FormManager.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.cs",
               "RelativeDocumentMoniker": "GastroManager\\UI\\FormManager.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.cs [Dise\u00F1o]",
               "RelativeToolTip": "GastroManager\\UI\\FormManager.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:15:03.125Z"
+              "WhenOpened": "2025-11-21T19:15:03.125Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DishesData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\Data\\DishesData.cs",
               "RelativeDocumentMoniker": "GastroManager\\Data\\DishesData.cs",
