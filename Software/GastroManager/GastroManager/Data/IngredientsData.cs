@@ -10,6 +10,8 @@ namespace GastroManager.Data
 {
     public class IngredientsData : IIngredientsRepository
     {
+        
+
         public List<Ingredients> Select()
         {
             
@@ -109,5 +111,95 @@ namespace GastroManager.Data
 
             }
         }
+
+        public string Delete(int id)
+        {
+            try
+            {
+
+                string connectionString = Connection.ConnectionString;
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+
+                    conn.Open();
+
+                    string query = "DELETE FROM Ingredients WHERE Ingredient_Id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+
+                        command.Parameters.AddWithValue("@Id", id);
+
+                        var rows = command.ExecuteNonQuery();
+
+                        if (rows == 0)
+                        {
+
+                            return "Error: Ingredient not found";
+
+                        } else
+                        {
+                            return "Ingredient deleted successfully";
+                        }
+
+                    }
+
+                }
+
+
+            } catch (SqlException ex)
+            {
+
+                if (ex.Number == 547)
+                {
+
+                    return "This ingredient cannot be removed, because it is being used.";
+                    
+                } else
+                {
+
+                    return "Error: " + ex.InnerException ?? ex.Message;
+
+                }
+
+
+            } catch (Exception ex)
+            {
+
+                return "Error: " + ex.InnerException ?? ex.Message;
+
+            }
+        }
+
+        public void UpdateStock(int id, int stock)
+        {
+
+            var connectionString = Connection.ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+
+                conn.Open();
+
+                string query = @"UPDATE
+                                Ingredients
+                                SET Available_count_in_stock = @Stock
+                                WHERE Ingredient_Id = @Id";
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+
+                    command.Parameters.AddWithValue("@Stock", stock);
+                    command.Parameters.AddWithValue("@Id", id);
+
+                    command.ExecuteNonQuery();
+
+                }
+
+            }
+        }
     }
+
+
 }

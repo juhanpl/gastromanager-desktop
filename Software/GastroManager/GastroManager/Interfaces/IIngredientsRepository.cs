@@ -11,6 +11,8 @@ namespace GastroManager.Interfaces
 
         List<Ingredients> Select();
         List<IngredientReadDTO> SelectByDishId(int Id);
+        string Delete(int id);
+        void UpdateStock(int id, int stock);
 
     }
 }

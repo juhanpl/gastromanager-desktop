@@ -47,8 +47,8 @@
             lblListOfDishes = new Label();
             tabIngredients = new TabPage();
             flowIngredients = new FlowLayoutPanel();
-            label2 = new Label();
-            label1 = new Label();
+            lblIngredientsDescription = new Label();
+            lblIngredientsTitle = new Label();
             tabDishDescription = new TabPage();
             txtDescriptionDetail = new RichTextBox();
             numServingDetail = new NumericUpDown();
@@ -261,8 +261,8 @@
             // tabIngredients
             // 
             tabIngredients.Controls.Add(flowIngredients);
-            tabIngredients.Controls.Add(label2);
-            tabIngredients.Controls.Add(label1);
+            tabIngredients.Controls.Add(lblIngredientsDescription);
+            tabIngredients.Controls.Add(lblIngredientsTitle);
             tabIngredients.Location = new Point(4, 24);
             tabIngredients.Name = "tabIngredients";
             tabIngredients.Padding = new Padding(3);
@@ -279,25 +279,25 @@
             flowIngredients.Size = new Size(575, 330);
             flowIngredients.TabIndex = 4;
             // 
-            // label2
+            // lblIngredientsDescription
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(33, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(316, 22);
-            label2.TabIndex = 3;
-            label2.Text = "Total available ingredients for the amount ($): NNNN";
+            lblIngredientsDescription.AutoSize = true;
+            lblIngredientsDescription.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIngredientsDescription.Location = new Point(33, 53);
+            lblIngredientsDescription.Name = "lblIngredientsDescription";
+            lblIngredientsDescription.Size = new Size(316, 22);
+            lblIngredientsDescription.TabIndex = 3;
+            lblIngredientsDescription.Text = "Total available ingredients for the amount ($): NNNN";
             // 
-            // label1
+            // lblIngredientsTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(33, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(191, 34);
-            label1.TabIndex = 2;
-            label1.Text = "List of Ingredients";
+            lblIngredientsTitle.AutoSize = true;
+            lblIngredientsTitle.Font = new Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIngredientsTitle.Location = new Point(33, 19);
+            lblIngredientsTitle.Name = "lblIngredientsTitle";
+            lblIngredientsTitle.Size = new Size(191, 34);
+            lblIngredientsTitle.TabIndex = 2;
+            lblIngredientsTitle.Text = "List of Ingredients";
             // 
             // tabDishDescription
             // 
@@ -602,7 +602,7 @@
         private DataGridViewTextBoxColumn colCost;
         private RichTextBox txtDescriptionDetail;
         private FlowLayoutPanel flowIngredients;
-        private Label label2;
-        private Label label1;
+        private Label lblIngredientsDescription;
+        private Label lblIngredientsTitle;
     }
 }

@@ -32,7 +32,7 @@
             lblPrice = new Label();
             linkedDelete = new LinkLabel();
             numUnit = new NumericUpDown();
-            label3 = new Label();
+            lblUnit = new Label();
             ((System.ComponentModel.ISupportInitialize)numUnit).BeginInit();
             SuspendLayout();
             // 
@@ -67,30 +67,32 @@
             linkedDelete.TabIndex = 5;
             linkedDelete.TabStop = true;
             linkedDelete.Text = "Delete";
+            linkedDelete.LinkClicked += linkedDelete_LinkClicked;
             // 
             // numUnit
             // 
-            numUnit.Location = new Point(171, 65);
+            numUnit.Location = new Point(122, 60);
             numUnit.Name = "numUnit";
             numUnit.Size = new Size(49, 23);
             numUnit.TabIndex = 6;
+            numUnit.ValueChanged += numUnit_ValueChanged;
             // 
-            // label3
+            // lblUnit
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Poppins", 9F);
-            label3.Location = new Point(226, 66);
-            label3.Name = "label3";
-            label3.Size = new Size(33, 22);
-            label3.TabIndex = 7;
-            label3.Text = "Unit";
+            lblUnit.AutoSize = true;
+            lblUnit.Font = new Font("Poppins", 9F);
+            lblUnit.Location = new Point(177, 61);
+            lblUnit.Name = "lblUnit";
+            lblUnit.Size = new Size(33, 22);
+            lblUnit.TabIndex = 7;
+            lblUnit.Text = "Unit";
             // 
             // IngredientControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(label3);
+            Controls.Add(lblUnit);
             Controls.Add(numUnit);
             Controls.Add(linkedDelete);
             Controls.Add(lblPrice);
@@ -108,6 +110,6 @@
         private Label lblPrice;
         private LinkLabel linkedDelete;
         private NumericUpDown numUnit;
-        private Label label3;
+        private Label lblUnit;
     }
 }

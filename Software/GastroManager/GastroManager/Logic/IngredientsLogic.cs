@@ -25,5 +25,31 @@ namespace GastroManager.Logic
 
         }
 
+        public string Delete(int id)
+        {
+
+            string messageContent = _repo.Delete(id);
+
+            if (messageContent.StartsWith("Error: "))
+            {
+
+                messageContent.Replace("Error: ", "");
+
+                return messageContent;
+
+
+            }
+
+            return messageContent;
+
+        }
+
+        public void ChangeStock(int id, int stock)
+        {
+
+            _repo.UpdateStock(id, stock);
+
+        }
+
     }
 }

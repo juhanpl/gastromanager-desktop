@@ -139,17 +139,63 @@ namespace GastroManager
 
             flowIngredients.Controls.Clear();
 
+            //Calculate the total price of the inventory
+            decimal totalOfIngredients = 0;
+
             var ingredients = _ingredientsLogic.GetIngredients();
 
             foreach (var item in ingredients)
             {
 
-                var ingredientControl = new IngredientControl();
+                totalOfIngredients += item.PricePerUnit * item.AvailableCountInStock;
+
+                var ingredientControl = new IngredientControl()
+                {
+
+                    IngredientName = item.IngredientName,
+                    Price = item.PricePerUnit,
+                    Stock = item.AvailableCountInStock,
+                    Unit = item.MainUnit,
+                    IngredientId = item.IngredientId,
+                    
+                };
+
+                ingredientControl.DeleteAction += DeleteAction;
+                ingredientControl.ChangedStockAction += ChangedStockAction;
 
                 flowIngredients.Controls.Add(ingredientControl);
 
                 
             }
+
+            lblIngredientsDescription.Text = $"Total available ingredients for the amount ($): {totalOfIngredients}";
+
+        }
+
+        private void DeleteAction(object? sender, int id)
+        {
+
+            var dialog = MessageBox.Show("Do you want eliminate this ingredient from the inventory?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (dialog == DialogResult.Yes)
+            {
+
+                var success = _ingredientsLogic.Delete(id);
+
+                MessageBox.Show(success);
+
+            }
+
+        }
+
+        private void ChangedStockAction(object? sender, int id)
+        {
+
+            var control = (IngredientControl)sender!;
+            var stock = Convert.ToInt32(control?.Stock);
+
+            _ingredientsLogic.ChangeStock(id, stock);
+
 
         }
 
@@ -160,7 +206,6 @@ namespace GastroManager
 
             //Adjust numericupdowns for the minimun and maximun prices
             AdjustPrices();
-
             //Reload all items
             LoadCategories();
             LoadAllDishes();
@@ -327,5 +372,6 @@ namespace GastroManager
             lblCostDetail.Text = $"Total Cost: {price * baseServings}$";
 
         }
+
     }
 }
