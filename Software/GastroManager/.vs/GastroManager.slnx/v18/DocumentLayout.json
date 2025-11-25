@@ -149,8 +149,7 @@
               "RelativeToolTip": "GastroManager\\Logic\\IngredientsLogic.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwDEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T20:12:13.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T20:12:13.484Z"
             },
             {
               "$type": "Document",
@@ -174,8 +173,7 @@
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UserControls\\IngredientControl.cs [Dise\u00F1o]",
               "RelativeToolTip": "GastroManager\\UserControls\\IngredientControl.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T20:06:43.56Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-11-24T20:06:43.56Z"
             },
             {
               "$type": "Document",
@@ -186,8 +184,7 @@
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.resx",
               "RelativeToolTip": "GastroManager\\UI\\FormManager.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-24T19:27:29.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T19:27:29.26Z"
             },
             {
               "$type": "Document",
@@ -199,8 +196,7 @@
               "RelativeToolTip": "GastroManager\\UI\\FormManager.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T19:27:27.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T19:27:27.906Z"
             },
             {
               "$type": "Document",
@@ -224,8 +220,7 @@
               "RelativeToolTip": "GastroManager\\Data\\RecipeData.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T16:14:22.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T16:14:22.713Z"
             },
             {
               "$type": "Document",
@@ -261,8 +256,7 @@
               "RelativeToolTip": "GastroManager\\Data\\IngredientsData.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAwwKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:03:11.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T20:03:11.157Z"
             },
             {
               "$type": "Document",
@@ -274,8 +268,7 @@
               "RelativeToolTip": "GastroManager\\Interfaces\\IIngredientsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:02:15.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T20:02:15.991Z"
             },
             {
               "$type": "Document",
@@ -287,8 +280,7 @@
               "RelativeToolTip": "GastroManager\\Logic\\DishesLogic.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T14:40:26.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T14:40:26.86Z"
             },
             {
               "$type": "Document",
@@ -298,7 +290,7 @@
               "RelativeDocumentMoniker": "GastroManager\\UI\\FormManager.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.cs",
               "RelativeToolTip": "GastroManager\\UI\\FormManager.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADwvwkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAANQAAAAAAAAAAADwv+AAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T19:15:34.533Z",
               "EditorCaption": ""
@@ -313,8 +305,7 @@
               "RelativeToolTip": "GastroManager\\Interfaces\\IDishesRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T13:58:31.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T13:58:31.401Z"
             },
             {
               "$type": "Document",
@@ -349,8 +340,7 @@
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\GastroManager\\Software\\GastroManager\\GastroManager\\UI\\FormManager.cs [Dise\u00F1o]",
               "RelativeToolTip": "GastroManager\\UI\\FormManager.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:15:03.125Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-11-21T19:15:03.125Z"
             },
             {
               "$type": "Document",
@@ -362,8 +352,7 @@
               "RelativeToolTip": "GastroManager\\Data\\DishesData.cs",
               "ViewState": "AgIAAOAAAAAAAAAAAAAwwOsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T14:03:50.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T14:03:50.485Z"
             },
             {
               "$type": "Document",

@@ -139,15 +139,10 @@ namespace GastroManager
 
             flowIngredients.Controls.Clear();
 
-            //Calculate the total price of the inventory
-            decimal totalOfIngredients = 0;
-
             var ingredients = _ingredientsLogic.GetIngredients();
 
             foreach (var item in ingredients)
             {
-
-                totalOfIngredients += item.PricePerUnit * item.AvailableCountInStock;
 
                 var ingredientControl = new IngredientControl()
                 {
@@ -164,6 +159,24 @@ namespace GastroManager
                 ingredientControl.ChangedStockAction += ChangedStockAction;
 
                 flowIngredients.Controls.Add(ingredientControl);
+
+                
+            }
+
+        }
+
+        private void RefreshInventoryPrice()
+        {
+
+            //Calculate the total price of the inventory
+            decimal totalOfIngredients = 0;
+
+            foreach (var item in flowIngredients.Controls)
+            {
+
+                var ingredientControl = (IngredientControl)item;
+
+                totalOfIngredients += ingredientControl.Price * ingredientControl.Stock;
 
                 
             }
@@ -186,6 +199,8 @@ namespace GastroManager
 
             }
 
+            RefreshInventoryPrice();
+
         }
 
         private void ChangedStockAction(object? sender, int id)
@@ -195,6 +210,8 @@ namespace GastroManager
             var stock = Convert.ToInt32(control?.Stock);
 
             _ingredientsLogic.ChangeStock(id, stock);
+
+            RefreshInventoryPrice();
 
 
         }
@@ -206,10 +223,12 @@ namespace GastroManager
 
             //Adjust numericupdowns for the minimun and maximun prices
             AdjustPrices();
-            //Reload all items
+
+            //Load all items
             LoadCategories();
             LoadAllDishes();
             LoadAllIngredients();
+            RefreshInventoryPrice();
 
 
 
