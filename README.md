@@ -1,64 +1,33 @@
-# GastroManager
+# gastromanager-desktop
 
-**GastroManager** es una aplicación de escritorio que recrea y permite gestionar platos, recetas e ingredientes. Incluye filtros por categoría, nombre, precio y disponibilidad, facilitando la administración del menú de un restaurante o proyecto culinario.
-
----
-
-## Características principales
-
-- Gestión de platos, recetas e ingredientes  
-- Filtros avanzados  
-- Visualización detallada de cada plato  
-- Administración eficiente del menú  
+**GastroManager** is a desktop application designed to recreate and manage dishes, recipes, and ingredients. It includes filters by category, name, price, and availability, facilitating the menu administration for restaurants or culinary projects.
 
 ---
 
-## ️ Tecnologías utilizadas
+## Main Features
+
+- Management of dishes, recipes, and ingredients
+- Advanced filters
+- Detailed visualization of each dish
+- Efficient menu administration
+
+---
+
+## Technologies Used
 
 - **C#**
 - **SQL Server**
-- Aplicación de escritorio (.NET)
+- **Desktop Application (.NET)**
 
 ---
 
-## Estructura del proyecto
+## Installation
 
-```text
-GastroManager/
-│
-├── Data/              # Acceso a datos y conexión SQL
-├── DTOs/              # Objetos de transferencia de datos
-├── Interfaces/        # Interfaces de repositorios
-├── Logic/             # Lógica de negocio
-├── Models/            # Modelos de base de datos
-├── UI/                # Formularios principales
-├── UserControls/      # Controles de usuario reutilizables
-├── Source/            # Imágenes utilizadas en la aplicación
-├── Program.cs         # Punto de entrada
-└── GastroManager.csproj
-```
-
-## Instalación
-
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/juhanpl/GastroManager.git
-   ```
-2. Ejecuta el script de la base de datos denominado "DishManagmnentDB_Script" en SQL Server
-3. Abre el proyecto en tu IDE favorito para C# (por ejemplo, Visual Studio).
-4. Restaura los paquetes y dependencias necesarios.
-5. Ejecuta la aplicación.
-
-## Uso
-
-- Utiliza los filtros para encontrar platos o ingredientes fácilmente.
-- Visualiza detalles de recetas e ingredientes.
-- Administra el menú según la disponibilidad y otras características.
-
-## Autor
-
-- [juhanpl](https://github.com/juhanpl)
-
-## Licencia
-
-Este proyecto actualmente no tiene una licencia especificada.
+1. Clone this repository:Bash
+    
+    `git clone https://github.com/juhanpl/GastroManager.git`
+    
+2. Execute the database script named **"DishManagmnentDB_Script"** in **SQL Server**.
+3. Open the project in your favorite C# IDE (e.g., Visual Studio).
+4. Restore the necessary packages and dependencies.
+5. Run the application
