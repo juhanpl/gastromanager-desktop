@@ -4,15 +4,6 @@
 
 ---
 
-## Main Features
-
-- Management of dishes, recipes, and ingredients
-- Advanced filters
-- Detailed visualization of each dish
-- Efficient menu administration
-
----
-
 ## Technologies Used
 
 - **C#**
