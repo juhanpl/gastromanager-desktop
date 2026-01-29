@@ -1,6 +1,6 @@
 # GastroManager
 
-**GastroManager** es una aplicación de escritorio que permite gestionar platos, recetas e ingredientes. Incluye filtros por categoría, nombre, precio y disponibilidad, facilitando la administración del menú de un restaurante o proyecto culinario.
+**GastroManager** es una aplicación de escritorio que recrea y permite gestionar platos, recetas e ingredientes. Incluye filtros por categoría, nombre, precio y disponibilidad, facilitando la administración del menú de un restaurante o proyecto culinario.
 
 ---
 
